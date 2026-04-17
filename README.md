@@ -4,16 +4,20 @@ A comprehensive full-stack parking management solution with real-time slot avail
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [Environment Variables](#environment-variables)
-- [API Documentation](#api-documentation)
-- [Deployment](#deployment)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [Architecture](#️-architecture)
+- [Getting Started](#-getting-started)
+- [Configuration](#-configuration)
+- [API Documentation](#-api-documentation)
+- [Deployment](#-deployment)
+- [Screenshots](#-screenshots)
+- [Testing](#-testing)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
+- [Acknowledgments](#-acknowledgments)
 
 ## 🎯 Overview
 
@@ -82,7 +86,7 @@ Smart Parking is a modern parking management system designed to streamline the p
 
 ## 🏗️ Architecture
 
-```
+```text
 ┌─────────────────┐
 │   React App     │ ← Frontend (Vercel)
 │   (Port 3000)   │
@@ -128,7 +132,7 @@ cd parking-validator
 mvn spring-boot:run
 ```
 
-Backend runs on `http://localhost:8080`
+> **Note**: The backend runs on `http://localhost:8080`
 
 3. **Frontend Setup**
 ```bash
@@ -137,7 +141,7 @@ npm install
 npm start
 ```
 
-Frontend runs on `http://localhost:3000`
+> **Note**: The frontend runs on `http://localhost:3000`
 
 ### Quick Start Script
 ```bash
@@ -158,17 +162,17 @@ To create an admin account, you'll need to generate an admin invite token using 
 
 1. Start the Spring Boot backend
 2. Use the `/api/admin/generate-invite` endpoint (if available)
-3. Or register with role "user" first, then manually update the role in MongoDB to "admin"
+3. Or register with role `user` first, then manually update the role in MongoDB to `admin`
 
 **Default Test Admin** (if seeded):
-- Email: `admin@parking.com`  
-- Password: `admin123`
+- **Email**: `admin@parking.com`
+- **Password**: `admin123`
 
-**Note**: The backend automatically seeds sample data on first startup.
+> **Note**: The backend automatically seeds sample data on first startup.
 
 ## 🔐 Configuration
 
-### Backend (application.properties)
+### Backend (`application.properties`)
 ```properties
 # Server Configuration
 server.port=8080
@@ -184,7 +188,7 @@ jwt.expiration=86400000
 logging.level.com.parking.validator=DEBUG
 ```
 
-### Frontend (config.js)
+### Frontend (`config.js`)
 ```javascript
 export const BACKEND_URL = isDevelopment
   ? 'http://localhost:8080'
@@ -240,10 +244,10 @@ export const API_BASE_URL = `${BACKEND_URL}/api`;
 2. Connect GitHub repository
 3. Set build command: `mvn clean package`
 4. Set start command: `java -jar target/parking-validator-1.0.0.jar`
-5. Add environment variables in application.properties
+5. Add environment variables in `application.properties`
 6. Deploy
 
-**Alternative**: Deploy as Docker container for easier configuration
+> **Alternative**: Deploy as Docker container for easier configuration
 
 ## 📸 Screenshots
 
@@ -296,14 +300,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Leaflet for mapping functionality
-- Socket.IO for real-time features
-- MongoDB Atlas for database hosting
-- Vercel for frontend hosting
+- [Leaflet](https://leafletjs.com/) for mapping functionality
+- [Socket.IO](https://socket.io/) for real-time features
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for database hosting
+- [Vercel](https://vercel.com/) for frontend hosting
 - React community for excellent documentation
 
 ---
 
 **⭐ If you found this project helpful, please give it a star!**
-< ! - -   L a s t   d e p l o y m e n t   t r i g g e r :   0 1 / 3 0 / 2 0 2 6   2 3 : 2 9 : 0 6   - - >  
- 
